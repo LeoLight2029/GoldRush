@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialouge</title>
+    <link rel='stylesheet' href="../style.css">
+    <style>
+        .container{
+            display:flex;
+            height:100vh;
+            text-align:center;
+            align-items:center;
+            justify-content: center;
+        }
+        .text{
+            max-width:100%;
+        }
+        #info{
+            position:absolute;
+            font-size: 2vh;
+            right:0;
+        }
+    </style>
+</head>
+<body>
+    <div class='text' id='info'></div>
+    <div class=container>
+        <div class='text' id='text'></div>
+        <button onclick='goToNextPage()'>Skip</button>
+    </div>
+    <script src='transportText2.js'></script>
+</body>
+</html>

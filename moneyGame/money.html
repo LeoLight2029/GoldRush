@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+    .hidden{
+        display:none;
+    }
+    .button{
+        height: 30vh;
+        width:30vh;
+    }
+    .container{
+        display:flex;
+        height:100vh;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <button class = button id="gameButton" onclick="startOrPlayGame()">Start Game</button>
+        <p class=text>Total Money: $<span id="totalMoney" class='text'>0</span></p>
+        <p class='text' id="timer">Time Left: 5s</p>
+    </div>
+<script src="money.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options</title>
+    <link rel='stylesheet' href='../style.css'>
+    <style>
+        .container{
+            display:flex;
+            height:100vh;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap:wrap;
+        }
+        .hidden{
+            display:none;
+        }
+        #info{
+            position:absolute;
+            font-size: 2vh;
+            right:0;
+        }
+    </style>
+</head>
+<body>
+    <div class='text' id='info'></div>
+    <div class=container>
+        <button id='train' class='button' onclick='train()'>Train</button>
+        <button id='ship'class='button' onclick='ship()'>Ship</button>
+        <button id='wagon'class='button'onclick='wagon()'>Wagon</button>
+    </div>
+    <script src='transport.js'></script>
+</body>
+</html>

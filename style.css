@@ -1,0 +1,33 @@
+@keyframes fall {
+    to {
+        transform: translateY(-100vh);
+    }
+  }
+  
+  .text{
+    font-size: 5vh;
+    font-family:monospace
+  }
+  
+  .button:active{
+    transition: all 0.05s ease-in-out;
+    opacity: .7;
+  }
+  
+  .button{
+    font-family:monospace;
+    cursor:pointer;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 1vh;
+    font-size: 5vh;
+    color: white;
+    padding: 1vh;
+    border-color: transparent;
+    margin-top: 1vh;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+  }
+  .button:hover{
+    transform:translateY(-1vh)
+  }
