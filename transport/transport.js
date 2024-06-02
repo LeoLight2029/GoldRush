@@ -17,7 +17,7 @@ function train(){
     document.getElementById('ship').disabled=true;
     document.getElementById('wagon').disabled=true;
     document.getElementById('train').disabled=true;
-    window.location.href='MOT/trainShip.html'
+    window.location.href='../MOT/trainShip.html'
 }
 function wagon(){
     localStorage.setItem('transportation', 'wagon')
@@ -25,7 +25,7 @@ function wagon(){
     document.getElementById('ship').disabled=true;
     document.getElementById('wagon').disabled=true;
     document.getElementById('train').disabled=true;
-    window.location.href='MOT/wagon.html'
+    window.location.href='../MOT/wagon.html'
 }
 function ship(){
     localStorage.setItem('transportation', 'ship')
@@ -33,6 +33,6 @@ function ship(){
     document.getElementById('ship').disabled=true;
     document.getElementById('wagon').disabled=true;
     document.getElementById('train').disabled=true;
-    window.location.href='MOT/trainShip.html'
+    window.location.href='../MOT/trainShip.html'
 }
 document.getElementById('info').textContent=`Hearts: ${localStorage.getItem('heart')} Cash: ${localStorage.getItem('cash')}`
