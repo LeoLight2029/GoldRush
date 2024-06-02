@@ -42,7 +42,7 @@ function dialouge() {
   }
   
   function goToNextPage() {
-    window.location.href = 'transport.html';
+    window.location.href = '../transport/transport.html';
   }
 
   document.getElementById('info').textContent=`Hearts: ${localStorage.getItem('heart')} Cash: ${localStorage.getItem('cash')}`
