@@ -48,5 +48,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
   
   function goToNextPage() {
-    window.location.href = '../chooseRace/race.html';
+    window.location.href = 'chooseRace/race.html';
   }
