@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
   
   function goToNextPage() {
-    window.location.href = '../gambling/gambling.html';
+    window.location.href = 'gambling/gambling.html';
   }
