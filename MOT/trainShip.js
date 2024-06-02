@@ -75,8 +75,8 @@ function food(){
 
 function nextPage(){
     if(localStorage.getItem('class') === 'first' || localStorage.getItem('class') === 'second'){
-        window.location.href='../textScreens/gamblingText.html'
+        window.location.href='textScreens/gamblingText.html'
     }else{
-        window.location.href='../transportProblem/problem.html'
+        window.location.href='transportProblem/problem.html'
     }
 }
