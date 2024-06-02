@@ -8,7 +8,7 @@ function updateInfo() {
 }
 
 function nextPage(){
-    window.location.href='transportProblem/problem.html'
+    window.location.href='../transportProblem/problem.html'
 }
 
 function bet(){

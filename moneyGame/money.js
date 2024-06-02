@@ -40,7 +40,7 @@ function endGame() {
     document.getElementById('gameButton').textContent = 'Start Game';
     document.getElementById('gameButton').disabled=true;
     localStorage.setItem('cash', clickCount*10)
-    window.location.href = 'textScreens/transportText2.html';
+    window.location.href = '../textScreens/transportText2.html';
 }
 
 function earnMoney() {

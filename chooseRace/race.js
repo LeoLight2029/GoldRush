@@ -3,7 +3,7 @@ function race(){
     let text = document.getElementById('text');
 
     function nextPage(){
-        window.location.href = 'textScreens/transportText.html';
+        window.location.href = '../textScreens/transportText.html';
     }
 
     let raceResult;

@@ -44,7 +44,7 @@ function dialouge() {
   }
   
   function goToNextPage() {
-    window.location.href = 'moneyGame/money.html';
+    window.location.href = '../moneyGame/money.html';
   }
 
   function info(){
