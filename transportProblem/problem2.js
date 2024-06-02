@@ -15,13 +15,16 @@ localStorage.setItem('cash', number)
 }
 
 function nextPage(){
-    window.location.href='problem2.html'
+    window.location.href='../textScreens/californiaText.html'
 }
-function generateRandomNumber() {
-    return Math.floor(Math.random() * 4) + 1;
-}
-let numberGenerated = generateRandomNumber()
-localStorage.setItem('number', numberGenerated)
+
+let numberGenerated;
+    
+do {
+    numberGenerated = Math.floor(Math.random() * 4) + 1;
+} while (numberGenerated  == localStorage.getItem('number'));
+
+console.log(numberGenerated)
 
 let MOT = localStorage.getItem('transportation')
 let race = localStorage.getItem('race')
@@ -198,7 +201,7 @@ function option3() {
             updateInfo();
             Swal.fire({
                 title: 'Limited Help',
-                text: 'Your friends turn out to not know English at all and got you into more trouble. You lost $50 after someone decided to rob you because of it',
+                text: 'Your friends turns out to not know English at all and got you into more trouble. You lost $50 after someone decided to rob you because of it',
                 icon: 'error'
             }).then(nextPage);
         } else if (numberGenerated === 2) {
@@ -291,7 +294,7 @@ function option4() {
             updateInfo()
             Swal.fire({
                 title: 'Lonely',
-                text: 'You isolated yourself and was lonely. You lost one heart after being too depressed',
+                text: 'You isolaed yourself and was lonely. You lost one heart after being too depressed',
                 icon: 'error'
             }).then(nextPage);
         } else if (numberGenerated === 2) {
@@ -377,7 +380,7 @@ function option4() {
 
 if(MOT === 'ship' && race === 'Chinese'){
     if(numberGenerated===1){
-        scenario.textContent='While on the ship, you realize your fluent Mandarin is no use, and you have no means of communcation. What do you do?';
+        scenario.textContent='While on the ship, you realize your fluent Mandarin is no use, and you have no means of communication with the other passengers. What do you do?';
         button1.textContent='Hire a translator ($50)';
         button2.textContent='Try to use body language to communicate';
         button3.textContent='Rely on other Chinese members who speak little English';

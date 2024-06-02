@@ -23,7 +23,7 @@ function race(){
 
     document.getElementById('button').disabled=true;
 
-    localStorage.setItem('heart', 3);
+    localStorage.setItem('heart', 5);
     localStorage.setItem('cash', '?')
     setTimeout(nextPage, 2000);
 }

@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    dialouge();
+    startTypingEffect();
   });
-function dialouge() {
+  
+  function startTypingEffect() {
     const sentences = [
-        `Congratulations, you are ${localStorage.getItem('race')}`,
-        "Just some more info, you guys will all start with 5 hearts",
-        "However how much money you start with, will be determined by you :D",
-        "The following minigame will determine this",
-        "Click as fast as you can!"
+      ""
     ];
     const textContainer = document.getElementById('text');
     let sentenceIndex = 0;
     const typingSpeed = 50;
-    const sentencePause = 1500;
+    const sentencePause = 1000;
   
     function typeSentence() {
       const text = sentences[sentenceIndex];
@@ -40,13 +37,8 @@ function dialouge() {
     }
     
     typeSentence();
-    setTimeout(info,9000)
   }
   
   function goToNextPage() {
-    window.location.href = '../moneyGame/money.html';
-  }
-
-  function info(){
-    document.getElementById('info').textContent=`Hearts: ${localStorage.getItem('heart')} Cash: ${localStorage.getItem('cash')}`
+    window.location.href = '../gambling/gambling.html';
   }
