@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation</title>
+    <link rel='stylesheet' href='../style.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        .container{
+            display:flex;
+            position:absolute;
+            height:98vh;
+            width:98vw;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap:wrap;
+        }
+        .hidden{
+            display:none;
+        }
+        #info{
+            position:absolute;
+            font-size: 2vh;
+            right:0;
+        }
+        .button{
+            font-size: 3vh;
+        }
+        .buttons{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 98vw;
+            flex-wrap:wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class='text' id='info'></div>
+    <div class=container id='container'>
+        <button class='button' onclick=first() id='first'>First Class $100</button>
+        <button class='button' onclick=second() id='second'>Second Class $50</button>
+        <button class='button' onclick=third() id='third'>Third Class $10</button>
+    </div>
+    <div class=hidden id='foods'>
+        <div class='text'>What food do you want?</div>
+        <div class=buttons>
+            <button class='button food-button' onclick=food() id='food'>Hardtack</button>
+            <button class='button food-button' onclick=food() id='food'>Salted Meat</button>
+            <button class='button food-button' onclick=food() id='food'>Canned Tomatos</button>
+            <button class='button food-button' onclick=food() id='food'>Dried Strawberries</button>
+            <button class='button food-button' onclick=food() id='food'>Beans</button>
+        </div>
+    </div>
+    <script src='trainShip.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

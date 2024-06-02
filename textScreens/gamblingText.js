@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    dialouge();
+    startTypingEffect();
   });
-function dialouge() {
+  
+  function startTypingEffect() {
     const sentences = [
-        `Congratulations, you ended up with $${localStorage.getItem('cash')}`,
-        "Now we can finally begin the journey to California!",
-        "Make sure to choose your path carefully, as to not lose hearts or waste your cash",
-        "Good Luck!"
+      "Welcome to the Gambling Room where you can further test your luck",
+      "You have the option to put your money at risk to have a chance to double it",
+      "You're allowed to do this as many times as you want",
+      "However the more money you lose, the harder the rest of the game will be",
+      "You can also choose to skip this entirely if you want",
+      "Happy Gambling :D"
     ];
     const textContainer = document.getElementById('text');
     let sentenceIndex = 0;
     const typingSpeed = 50;
-    const sentencePause = 1500;
+    const sentencePause = 1000;
   
     function typeSentence() {
       const text = sentences[sentenceIndex];
@@ -42,6 +45,5 @@ function dialouge() {
   }
   
   function goToNextPage() {
-    window.location.href = '../transport/transport.html';
+    window.location.href = '../gambling/gambling.html';
   }
-  document.getElementById('info').textContent=`Hearts: ${localStorage.getItem('heart')} Cash: ${localStorage.getItem('cash')}`

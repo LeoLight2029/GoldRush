@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   function startTypingEffect() {
     const sentences = [
       "Welcome to \"Will You Survive The Gold Rush\"!",
-      "We have created a historically accurate game that will take you down the journey of a Gold Prospector.",
+      "We have created a (somewhat) historically accurate game that will take you down the journey of a Gold Prospector.",
       "This is a decision based game with a storyline behind everything.",
-      "Some decisions can have impacts long down the road.",
+      "Each player's experience will be unique",
       "Spoiler alert, it's not gonna be easy.",
       "But sprinkled in between everything will be some easter eggs >:D",
       "We hope you enjoy the game!",

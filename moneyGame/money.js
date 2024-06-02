@@ -1,6 +1,6 @@
 let totalMoney = 0;
 let timer;
-const gameDuration = 5;
+const gameDuration = 10;
 let timeLeft = gameDuration;
 let clickCount = 0;
 let gameStarted = false;
@@ -39,13 +39,13 @@ function endGame() {
     gameStarted = false;
     document.getElementById('gameButton').textContent = 'Start Game';
     document.getElementById('gameButton').disabled=true;
-    localStorage.setItem('cash', clickCount*5)
+    localStorage.setItem('cash', clickCount*10)
     window.location.href = '../textScreens/transportText2.html';
 }
 
 function earnMoney() {
     clickCount++;
-    totalMoney = clickCount * 5;
+    totalMoney = clickCount * 10;
     updateTotalMoney();
 }
 
