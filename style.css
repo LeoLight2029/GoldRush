@@ -31,3 +31,8 @@
   .button:hover{
     transform:translateY(-1vh)
   }
+  #info{
+    position:absolute;
+    font-size: 4vh;
+    right:0;
+}
