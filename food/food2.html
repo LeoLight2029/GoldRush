@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold Rush</title>
     <link rel="icon" type="image/png" href="../images/gold.png">
-    <link rel='stylesheet' href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel='stylesheet' href='../style.css'>
     <style>
         .container{
             display:flex;
             height:98vh;
-            text-align:center;
-            align-items:center;
-            justify-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap:wrap;
         }
-        .text{
-            max-width:100%;
+        .hidden{
+            display:none;
         }
     </style>
 </head>
 <body>
+    <div class='text' id='info'></div>
     <div class=container>
-        <div class='text' id='text'></div>
-        <button onclick='goToNextPage()'>Skip</button>
     </div>
-    <script src='californiaText.js'></script>
+    <script src='food2.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

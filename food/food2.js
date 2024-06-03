@@ -14,6 +14,7 @@ function setCash(number){
 localStorage.setItem('cash', number)
 }
 
+
 function nextPage(){
-    window.location.href='food2.html'
+    window.location.href='NEXTPAGEHERE'
 }

@@ -29,7 +29,7 @@
     transition: all 0.3s ease-in-out;
   }
   .button:hover{
-    transform:translateY(-1vh)
+    transform:translateY(-.75vh)
   }
   #info{
     position:absolute;
