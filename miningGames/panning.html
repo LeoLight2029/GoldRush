@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Rush</title>
+  <link rel="icon" type="image/png" href="../images/gold.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel='stylesheet' href='../style.css'>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 98vh;
+    }
+
+    .gold-pan {
+      width: 750px;
+      height: 750px;
+      background-color: #deb887;
+      border: 2px solid #000;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .gold-nugget {
+      width: 20px;
+      height: 20px;
+      background-color: #ffd700;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    .text {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="score" class="text">Score: <span id="scoreValue">0</span></div>
+    <div id="timer" class="text">Time Left: <span id="timeLeft">15</span> seconds</div>
+    <div class="gold-pan" id="goldPan"></div>
+    <button onclick="startGame()" class="button">Start Panning</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="panning.js"></script>
+</body>
+</html>

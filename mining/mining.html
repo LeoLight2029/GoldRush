@@ -19,39 +19,25 @@
         .hidden{
             display:none;
         }
-        .selected{
-            background-color: green;
-        }
-        .stores{
+        .buttons{
             display:flex;
-            width:98vw;
-            align-items: center;
+            width:98vh;
             justify-content: space-evenly;
-            font-size: 4vw;
-        }
-        .foods{
-            display:flex;
-            width:98vw;
             align-items: center;
-            justify-content: space-evenly;
         }
     </style>
 </head>
 <body>
     <div class='text' id='info'></div>
     <div class=container>
-        <div class=stores>
-            <button onclick = store1() id = store1 class=button>Store 1</button>
-            <button onclick = store2()  id = store2 class=button>Store 2</button>
-        </div>
-        <div class=foods>
-            <button onclick = food() id = food1 class='button hidden'></button>
-            <button onclick = food() id = food2  class='button hidden'></button>
-            <button onclick = food() id = food3 class='button hidden'></button>
-            <button onclick = food() id = food4  class='button hidden'></button>
+        <div class=text>Where do you want to mine?</div>
+        <div class=buttons>
+            <button onclick = SN() class=button>Sierra Nevada</button>
+            <button onclick= KM() class=button>Klamath Mountains</button>
+            <button onclick = MD() class=button>Mojave Desert</button>
         </div>
     </div>
-    <script src='food2.js'></script>
+    <script src='mining.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

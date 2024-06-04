@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Rush</title>
+  <link rel="icon" type="image/png" href="../images/gold.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel='stylesheet' href='../style.css'>
+  <style>
+    .game-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .mine {
+      width: 50vw;
+      height: 50vw;
+      background-color: #555;
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .miner {
+      width: 30px;
+      height: 30px;
+      background-color: brown;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gold {
+      width: 20px;
+      height: 20px;
+      background-color: #ffd700;
+      position: absolute;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class = text d="score">Score: <span id="scoreValue">0</span></div>
+    <div class = text id="timer">Time Left: <span id="timeLeft">30</span> seconds</div>
+    <div class="mine" id="mine"></div>
+    <button class = button onclick="startGame()">Start Mining</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="hardRock.js"></script>
+</body>
+</html>

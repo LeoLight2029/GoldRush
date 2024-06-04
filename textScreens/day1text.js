@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   function startTypingEffect() {
     const sentences = [
-      "Congratulations, you have finally arrived at California",
-      "I hope you have an adequate amount of money",
-      "Before settling in anywhere, you decide to resupply your food, since your journey used up all of it",
-      "After that you will finally buy supplies and start your Gold Prospecting Carreer!"
+      "Congratulations, you have reached Day 1",
+      "This is where you can start making back all the money you spent to get here",
+      "As you progress through the game, you will unlock more ways to mine gold",
+      "Happy Mining!"
     ];
     const textContainer = document.getElementById('text');
     let sentenceIndex = 0;
@@ -43,5 +43,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
   
   function goToNextPage() {
-    window.location.href = '../food/food.html';
+    window.location.href = '../miningMethod/method.html';
   }

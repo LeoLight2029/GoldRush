@@ -19,39 +19,45 @@
         .hidden{
             display:none;
         }
-        .selected{
-            background-color: green;
-        }
-        .stores{
+        .sellerbuttons{
             display:flex;
-            width:98vw;
-            align-items: center;
             justify-content: space-evenly;
+            width:98vw;
+        }
+        .toolbuttons{
+            display:flex;
+            justify-content: space-evenly;
+            width:98vw;
+        }
+        .confirm{
             font-size: 4vw;
         }
-        .foods{
-            display:flex;
-            width:98vw;
-            align-items: center;
-            justify-content: space-evenly;
+        .selected{
+            background-color: green;
         }
     </style>
 </head>
 <body>
     <div class='text' id='info'></div>
     <div class=container>
-        <div class=stores>
-            <button onclick = store1() id = store1 class=button>Store 1</button>
-            <button onclick = store2()  id = store2 class=button>Store 2</button>
+        <div class=seller>
+            <div class=text>Seller</div>
+            <div class=sellerbuttons>
+                <button onclick=sell1() id = 'seller1' class=button>Joshua (VIP Dealer)</button>
+                <button onclick=sell2() id = 'seller2' class=button>Thomas (Average Dealer)</button>
+                <button onclick=sell3() id = 'seller3' class=button>Jimmithy (Shady Dealer)</button>
+            </div>
         </div>
-        <div class=foods>
-            <button onclick = food() id = food1 class='button hidden'></button>
-            <button onclick = food() id = food2  class='button hidden'></button>
-            <button onclick = food() id = food3 class='button hidden'></button>
-            <button onclick = food() id = food4  class='button hidden'></button>
+        <div class=tools>
+            <div class=text>Tools</div>
+            <div class=toolbuttons>
+                <button id = new class=button>New Bundle</button>
+                <button id = used class=button>Used Bundle</button>
+            </div>
         </div>
+        <button id = confirm onclick = confirmPurchase() class='button confirm'>Confirm</button>
     </div>
-    <script src='food2.js'></script>
+    <script src='materials.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

@@ -15,14 +15,5 @@ localStorage.setItem('cash', number)
 }
 
 function nextPage(){
-    window.location.href='food2.html'
-}
-function market(){
-    localStorage.setItem('store', 'market')
-    nextPage()
-}
-
-function farm(){
-    localStorage.setItem('store', 'farm')
-    nextPage()
+    window.location.href='NEXTPAGEHERE'
 }

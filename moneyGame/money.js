@@ -1,6 +1,6 @@
 let totalMoney = 0;
 let timer;
-const gameDuration = 10;
+const gameDuration = 5;
 let timeLeft = gameDuration;
 let clickCount = 0;
 let gameStarted = false;

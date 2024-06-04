@@ -15,43 +15,31 @@
             justify-content: space-evenly;
             align-items: center;
             flex-wrap:wrap;
+            flex-direction: column;
         }
         .hidden{
             display:none;
         }
-        .selected{
-            background-color: green;
-        }
-        .stores{
+        .buttons{
             display:flex;
-            width:98vw;
-            align-items: center;
+            width:98vh;
             justify-content: space-evenly;
-            font-size: 4vw;
-        }
-        .foods{
-            display:flex;
-            width:98vw;
             align-items: center;
-            justify-content: space-evenly;
+            flex-wrap:wrap;
         }
     </style>
 </head>
 <body>
     <div class='text' id='info'></div>
     <div class=container>
-        <div class=stores>
-            <button onclick = store1() id = store1 class=button>Store 1</button>
-            <button onclick = store2()  id = store2 class=button>Store 2</button>
-        </div>
-        <div class=foods>
-            <button onclick = food() id = food1 class='button hidden'></button>
-            <button onclick = food() id = food2  class='button hidden'></button>
-            <button onclick = food() id = food3 class='button hidden'></button>
-            <button onclick = food() id = food4  class='button hidden'></button>
+        <div class=text>Choose Your Mining Method</div>
+        <div class=buttons>
+            <button class = 'button hidden' id=method1 onclick=method1()>Method1</button>
+            <button class = 'button hidden' id=method2 onclick=method2()>Method2 </button>
+            <button class = 'button hidden' id=method3 onclick=method3()>Method3 </button>
         </div>
     </div>
-    <script src='food2.js'></script>
+    <script src='method.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
