@@ -119,7 +119,7 @@ function next() {
     }else if(day==='2'){
         window.location.href='../textScreens/day3text.html'
     }else{
-        window.location.href='../endScreen/endscreen.html'
+        window.location.href='../endScreen/endScreen.html'
     }
 }
 function checkHearts() {
