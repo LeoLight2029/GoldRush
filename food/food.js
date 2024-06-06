@@ -26,3 +26,12 @@ function farm(){
     localStorage.setItem('store', 'farm')
     nextPage()
 }
+function checkHearts() {
+    let hearts = parseInt(localStorage.getItem('heart'), 10) || 0;
+    let cash = parseInt(localStorage.getItem('cash'),10 || 0)
+    if (hearts <= 0 || cash <=0) {
+        window.location.href = '../deathScreen/death.html'; 
+    }
+}
+
+setInterval(checkHearts, 1000);

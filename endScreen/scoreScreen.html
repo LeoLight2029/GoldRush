@@ -17,29 +17,12 @@
             flex-wrap:wrap;
             flex-direction: column;
         }
-        .hidden{
-            display:none;
-        }
-        .input{
-            font-size: 4vh;
-        }
-        .button{
-            font-size: 3vh;
-        }
-        .next{
-            bottom:0;
-            right:5;
-            font-size:1vh;
-        }
     </style>
 </head>
 <body>
-    <div class='text' id='info'></div>
     <div class=container>
-        <div class=text>Gambling Room</div>
-        <input type="number" class = input id='input' placeholder="Enter your bet" min="1">
-        <button class=button onclick=bet()>Confirm Bet</button>
-        <button class='button next' onclick=nextPage()>Next Screen</button>
+        <div id= score class='text'>Your Final Score: </div>
+        <button class=button onclick=playAgain()>Play Again</button>
     </div>
     <div class="background">
         <div class="sun"></div>
@@ -47,7 +30,7 @@
         <div class="cactus cactus-1"></div>
         <div class="cactus cactus-2"></div>
     </div>
-    <script src='gambling.js'></script>
+    <script src='scoreScreen.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

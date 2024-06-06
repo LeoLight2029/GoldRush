@@ -80,3 +80,13 @@ function nextPage(){
         window.location.href='../transportProblem/problem.html'
     }
 }
+
+function checkHearts() {
+    let hearts = parseInt(localStorage.getItem('heart'), 10) || 0;
+    let cash = parseInt(localStorage.getItem('cash'),10 || 0)
+    if (hearts <= 0 || cash <=0) {
+        window.location.href = '../deathScreen/death.html'; 
+    }
+}
+
+setInterval(checkHearts, 1000);

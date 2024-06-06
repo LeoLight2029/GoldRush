@@ -4,36 +4,154 @@
     }
   }
   
-  .text{
-    font-size: 5vh;
-    font-family:monospace;
-    text-align: center;
-  }
+  .text {
+    font-family: 'Special Elite', cursive; /* Applying the Wild West themed font */
+    font-size: 3vw; /* Slightly smaller for minimalism */
+    color: #3B2F2F; /* Dark brown color for high contrast */
+    text-shadow: 1px 1px 0 #FFFFFF; /* White shadow for readability */
+    padding: 10px;
+}
   
-  .button:active{
+  .button:active {
     transition: all 0.05s ease-in-out;
-    opacity: .7;
-  }
-  
-  .button{
-    font-family:monospace;
-    cursor:pointer;
-    background-color: black;
+    opacity: 0.7;
+}
+
+.button {
+    font-family: 'Courier New', monospace; /* More fitting for wild west theme */
     cursor: pointer;
-    border-radius: 1vh;
-    font-size: 2vw;
-    color: white;
-    padding: 1vh;
-    border-color: transparent;
+    background-color: #8B4513; /* SaddleBrown color */
+    border-radius: 5px; /* Less rounded, more rugged */
+    font-size: 3vw;
+    color: #FFD700; /* Gold color for a striking contrast */
+    padding: 1vh 2vh; /* Adjusted padding for better proportions */
+    border: 2px solid #DAA520; /* GoldenRod color for border */
     margin-top: 1vh;
     z-index: 2;
     transition: all 0.3s ease-in-out;
-  }
-  .button:hover{
-    transform:translateY(-.75vh)
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    position: relative; /* To contain pseudo-elements */
+}
+
+.button:hover {
+    transform: translateY(-0.75vh);
+    background-color: #A0522D; /* Darker shade on hover for visual feedback */
+}
+
+.button::before, .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: inherit; /* Match the button's border radius */
+    box-sizing: border-box; /* Ensure it sizes correctly */
+}
+
+.button::before {
+    border-color: #DAA520; /* GoldenRod color */
+    transform: translate(-5px, -5px);
+    z-index: -1;
+}
+
+.button::after {
+    border: 1px dashed #DAA520; /* Dashed GoldenRod color */
+    transform: translate(-8px, -8px);
+    z-index: -2;
+}
   #info{
     position:absolute;
     font-size: 4vh;
     right:0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #ffeb99, #ffe6b3, #ffd6b3, #ffcccc);
+  height: 98vh;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.sun {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  background: #ffc400;
+  border-radius: 50%;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: #9e5a00c0;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 15%;
+  background: #006400;
+  border-radius: 10px;
+}
+
+.cactus::before, .cactus::after {
+  content: '';
+  position: absolute;
+  background: #006400;
+  border-radius: 10px;
+}
+
+.cactus-1 {
+  left: 20%;
+  width: 30px;
+  height: 100px;
+}
+
+.cactus-1::before {
+  left: -20px;
+  bottom: 30px;
+  width: 20px;
+  height: 50px;
+}
+
+.cactus-1::after {
+  right: -20px;
+  bottom: 50px;
+  width: 20px;
+  height: 50px;
+}
+
+.cactus-2 {
+  left: 70%;
+  width: 20px;
+  height: 80px;
+}
+
+.cactus-2::before {
+  left: -15px;
+  bottom: 20px;
+  width: 15px;
+  height: 40px;
+}
+
+.cactus-2::after {
+  right: -15px;
+  bottom: 40px;
+  width: 15px;
+  height: 40px;
 }

@@ -130,7 +130,7 @@ function endGame() {
   Swal.fire({
     title: 'Congrats!',
     text: `You have made $${score*15}`,
-    icon: 'warning',
+    icon: 'success',
     confirmButtonText: 'OK',
     confirmButtonColor:'#0000FF'
   }).then(nextPage);

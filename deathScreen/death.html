@@ -20,26 +20,12 @@
         .hidden{
             display:none;
         }
-        .input{
-            font-size: 4vh;
-        }
-        .button{
-            font-size: 3vh;
-        }
-        .next{
-            bottom:0;
-            right:5;
-            font-size:1vh;
-        }
     </style>
 </head>
 <body>
-    <div class='text' id='info'></div>
     <div class=container>
-        <div class=text>Gambling Room</div>
-        <input type="number" class = input id='input' placeholder="Enter your bet" min="1">
-        <button class=button onclick=bet()>Confirm Bet</button>
-        <button class='button next' onclick=nextPage()>Next Screen</button>
+        <div id = text class=text></div>
+        <button onclick = playAgain() class=button>Play Again</button>
     </div>
     <div class="background">
         <div class="sun"></div>
@@ -47,7 +33,17 @@
         <div class="cactus cactus-1"></div>
         <div class="cactus cactus-2"></div>
     </div>
-    <script src='gambling.js'></script>
+    <script>
+        if(localStorage.getItem('heart')==='0'){
+            document.getElementById('text').textContent='You died after losing all your hearts'
+        }else {
+            document.getElementById('text').textContent='You were forced to go back home after losing all your money'
+        }
+        function playAgain(){
+            localStorage.clear()
+            window.location.href='../index.html'
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

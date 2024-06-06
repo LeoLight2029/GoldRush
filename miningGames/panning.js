@@ -89,7 +89,6 @@ let day = localStorage.getItem('day')
 
 function endGame() {
     clearInterval(timerId);
-    clearInterval(respawnIntervalId);
     let value;
     if(day==='1'){
         value=7;

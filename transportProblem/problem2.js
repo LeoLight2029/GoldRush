@@ -13,6 +13,15 @@ localStorage.setItem('heart', number)
 function setCash(number){
 localStorage.setItem('cash', number)
 }
+function checkHearts() {
+    let hearts = parseInt(localStorage.getItem('heart'), 10) || 0;
+    let cash = parseInt(localStorage.getItem('cash'),10 || 0)
+    if (hearts <= 0 || cash <=0) {
+        window.location.href = '../deathScreen/death.html'; 
+    }
+}
+
+setInterval(checkHearts, 1000);
 
 function nextPage(){
     window.location.href='../textScreens/californiaText.html'
@@ -23,8 +32,6 @@ let numberGenerated;
 do {
     numberGenerated = Math.floor(Math.random() * 4) + 1;
 } while (numberGenerated  == localStorage.getItem('number'));
-
-console.log(numberGenerated)
 
 let MOT = localStorage.getItem('transportation')
 let race = localStorage.getItem('race')
@@ -151,7 +158,7 @@ function option2() {
             updateInfo();
             Swal.fire({
                 title: 'Outdated Maps',
-                text: 'Using outdated maps somehow led your ship into mars. You lose one heart from lack of oxygen before getting back to Earth',
+                text: 'Using outdated maps led your ship to the wrong part of America. You lose one heart.',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -173,7 +180,7 @@ function option2() {
             updateInfo();
             Swal.fire({
                 title: 'Health Problems',
-                text: 'It turns out you had anal fistula, and lost one heart',
+                text: 'It turns out you very serious health problems, and lost one heart',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -201,7 +208,7 @@ function option3() {
             updateInfo();
             Swal.fire({
                 title: 'Limited Help',
-                text: 'Your friends turns out to not know English at all and got you into more trouble. You lost $50 after someone decided to rob you because of it',
+                text: 'Your friends turn out to not know English at all and got you into more trouble. You lost $50 after someone decided to rob you because of it',
                 icon: 'error'
             }).then(nextPage);
         } else if (numberGenerated === 2) {
@@ -238,9 +245,12 @@ function option3() {
         }
     } else if (MOT === 'ship' && race === 'Latin American') {
         if (numberGenerated === 1) {
+            heart-=1
+            setHeart(heart)
+            updateInfo();
             Swal.fire({
                 title: 'Instinct',
-                text: 'Going by instinct gets you even more lost.',
+                text: 'Going by instinct gets you even more lost. You lost one heart',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -264,7 +274,7 @@ function option3() {
             updateInfo()
             Swal.fire({
                 title: 'Contamination',
-                text: 'I mean if you chose this you had it coming. You lost two hearts',
+                text: 'Eating dirty food made you sick (shocker). You lost two hearts',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -294,7 +304,7 @@ function option4() {
             updateInfo()
             Swal.fire({
                 title: 'Lonely',
-                text: 'You isolaed yourself and was lonely. You lost one heart after being too depressed',
+                text: 'You isolated yourself and was lonely. You lost one heart after being too depressed',
                 icon: 'error'
             }).then(nextPage);
         } else if (numberGenerated === 2) {
@@ -323,7 +333,7 @@ function option4() {
             updateInfo()
             Swal.fire({
                 title: 'Dangerous Attempt',
-                text: 'idk why you think that would work. You lost 2 hearts',
+                text: 'Your attempt did not work. You lost 2 hearts',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -336,7 +346,7 @@ function option4() {
             updateInfo()
             Swal.fire({
                 title: 'Lost',
-                text: 'You somehow ended up in the Lost City of Atlantis. The mermaids attacked you and you lost a heart',
+                text: 'Your ship got lost. You lost a heart trying to find your way back',
                 icon: 'error'
             }).then(() => {
                 nextPage();
@@ -380,7 +390,7 @@ function option4() {
 
 if(MOT === 'ship' && race === 'Chinese'){
     if(numberGenerated===1){
-        scenario.textContent='While on the ship, you realize your fluent Mandarin is no use, and you have no means of communication with the other passengers. What do you do?';
+        scenario.textContent='While on the ship, you realize your fluent Mandarin is no use, and you have no means of communcation. What do you do?';
         button1.textContent='Hire a translator ($50)';
         button2.textContent='Try to use body language to communicate';
         button3.textContent='Rely on other Chinese members who speak little English';

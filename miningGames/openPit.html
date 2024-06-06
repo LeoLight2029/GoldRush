@@ -8,48 +8,48 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <link rel='stylesheet' href='../style.css'>
   <style>
-    .container {
+    .game-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       height: 98vh;
+      text-align: center;
     }
 
-    .gold-pan {
-      width: 750px;
-      height: 750px;
-      background-color: #deb887;
-      border: 2px solid #000;
-      border-radius: 10px;
+    .mine {
+      width: 50vw;
+      height: 50vw;
+      background-color: #D3b683;
       position: relative;
-      overflow: hidden;
-      margin-bottom: 20px;
+      margin: 20px auto;
     }
 
-    .gold-nugget {
+    .miner {
+      width: 30px;
+      height: 30px;
+      background-color: brown;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gold {
       width: 20px;
       height: 20px;
       background-color: #ffd700;
-      border-radius: 50%;
       position: absolute;
-    }
-
-    .button {
-      margin-top: 20px;
-    }
-
-    .text {
-      margin-bottom: 10px;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div id="score" class="text">Score: <span id="scoreValue">0</span></div>
-    <div id="timer" class="text">Time Left: <span id="timeLeft">15</span> seconds</div>
-    <div class="gold-pan" id="goldPan"></div>
-    <button onclick="startGame()" class="button">Start Panning</button>
+  <div class="game-container">
+    <div class = text d="score">Score: <span id="scoreValue">0</span></div>
+    <div class = text id="timer">Time Left: <span id="timeLeft">30</span> seconds</div>
+    <div class="mine" id="mine"></div>
+    <button class = button onclick="startGame()">Start Mining</button>
   </div>
   <div class="background">
     <div class="sun"></div>
@@ -58,6 +58,6 @@
     <div class="cactus cactus-2"></div>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-  <script src="panning.js"></script>
+  <script src="hardRock.js"></script>
 </body>
 </html>

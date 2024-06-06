@@ -27,3 +27,5 @@ function race(){
     localStorage.setItem('cash', '?')
     setTimeout(nextPage, 2000);
 }
+
+setInterval(checkHearts, 1000);
