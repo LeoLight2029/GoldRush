@@ -52,8 +52,8 @@ function generateNugget() {
     const numNuggets = 1
   
     for (let i = 0; i < numNuggets; i++) {
-      const nuggetX = Math.floor(Math.random() * 750);
-      const nuggetY = Math.floor(Math.random() * 750); 
+      const nuggetX = Math.floor(Math.random() * 200);
+      const nuggetY = Math.floor(Math.random() * 200); 
       const goldNugget = document.createElement("div");
       goldNugget.classList.add("gold-nugget");
       goldNugget.style.left = `${nuggetX}px`;
@@ -68,8 +68,8 @@ function generateNuggets() {
   const numNuggets = Math.floor(Math.random() * 11)+5;
 
   for (let i = 0; i < numNuggets; i++) {
-    const nuggetX = Math.floor(Math.random() * 750);
-    const nuggetY = Math.floor(Math.random() * 750); 
+    const nuggetX = Math.floor(Math.random() * 200);
+    const nuggetY = Math.floor(Math.random() * 200); 
     const goldNugget = document.createElement("div");
     goldNugget.classList.add("gold-nugget");
     goldNugget.style.left = `${nuggetX}px`;
